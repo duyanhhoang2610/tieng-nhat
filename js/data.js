@@ -11,7 +11,7 @@ const minnaData = {
       { id: 4, jp: "あのかた", romaji: "ano kata", vi: "Vị kia (lịch sự)", audioText: "あのかた" },
       { id: 5, jp: "みなさん", romaji: "minasan", vi: "Mọi người", audioText: "みなさん" },
       { id: 6, jp: "～さん", romaji: "~san", vi: "Anh / Chị / Ông / Bà", audioText: "さん" },
-      { id: 7, jp: "～ちゃん", romaji: "~chan", vi: "Bé (xưng呼 trẻ em)", audioText: "ちゃん" },
+      { id: 7, jp: "～ちゃん", romaji: "~chan", vi: "Bé (xưng hô trẻ em)", audioText: "ちゃん" },
       { id: 8, jp: "～じん", romaji: "~jin", vi: "Người (nước...)", audioText: "じん" },
       { id: 9, jp: "せんせい", romaji: "sensei", vi: "Thầy / Cô giáo", audioText: "せんせい" },
       { id: 10, jp: "きょうし", romaji: "kyoushi", vi: "Giáo viên (nghề nghiệp)", audioText: "きょうし" },
@@ -46,7 +46,7 @@ const minnaData = {
     fillBlanks: [
       { id: 1, question: "わたし [blank] がくせいです。", answer: "は", options: ["は", "が", "の", "も"] },
       { id: 2, question: "あのひとは いしゃ [blank] ありません。", answer: "じゃ", options: ["じゃ", "は", "か", "と"] },
-      { id: 3, question: "ミラーさんは IMC [blank] しゃいです。", answer: "の", options: ["の", "は", "も", "で"] },
+      { id: 3, question: "ミラーさんは IMC [blank] しゃいんです。", answer: "の", options: ["の", "は", "も", "で"] },
       { id: 4, question: "サントスさん [blank] かいしゃいんですか。", answer: "も", options: ["も", "の", "へ", "で"] },
       { id: 5, question: "あのかたは [blank] ですか。- マイクさんです。", answer: "どなた", options: ["どなた", "なんさい", "なん", "どこ"] },
       { id: 6, question: "たなかさんは 30さい [blank]。", answer: "です", options: ["です", "じゃ", "か", "の"] }
@@ -109,7 +109,7 @@ const minnaData = {
     ],
     quiz: [
       { q: "Từ nào có nghĩa là 'Từ điển'?", options: ["ほん", "じしょ", "ざっし", "とけい"], a: 1 },
-      { q: "'これ' dùng để chỉ chỉ vật ở đâu?", options: ["Gần người nói", "Gần người nghe", "Xa cả hai", "Không xác định"], a: 0 },
+      { q: "'これ' dùng để chỉ vật ở đâu?", options: ["Gần người nói", "Gần người nghe", "Xa cả hai", "Không xác định"], a: 0 },
       { q: "Dịch: 'Cái chìa khóa này là của tôi'", options: ["これのかぎは わたしです。", "このかぎは わたしのです。", "それのかぎは わたしのです。", "このかぎは わたしのほんです。"], a: 1 },
       { q: "Từ 'しんぶん' nghĩa là gì?", options: ["Tạp chí", "Sổ tay", "Tờ báo", "Danh thiếp"], a: 2 },
       { q: "Để hỏi 'Cái này là cái gì?', dùng câu nào?", options: ["これは 何ですか。", "これは 誰ですか。", "これは どこですか。", "これは いくらですか。"], a: 0 }
@@ -192,7 +192,7 @@ const minnaData = {
       { q: "Động từ 'Thức dậy' là gì?", options: ["ねます", "おきます", "やすみます", "はたらきます"], a: 1 },
       { q: "Từ nào nghĩa là 'Hôm qua'?", options: ["きょう", "あした", "きのう", "おととい"], a: 2 },
       { q: "'Thư viện' tiếng Nhật là gì?", options: ["ぎんこう", "ゆうびんきょく", "としょかん", "びじゅつかん"], a: 2 },
-      { q: "Quá khứ của 'します' là gì?", options: ["しました", "しません", " meした", "する"], a: 0 }
+      { q: "Quá khứ của 'します' là gì?", options: ["しました", "しません", "しました", "する"], a: 0 }
     ]
   },
 
@@ -242,7 +242,7 @@ const minnaData = {
       { id: 5, jp: "よみます", romaji: "yomimasu", vi: "Đọc", audioText: "よみます" },
       { id: 6, jp: "かきます", romaji: "kakimasu", vi: "Viết / Vẽ", audioText: "かきます" },
       { id: 7, jp: "かいます", romaji: "kaimasu", vi: "Mua", audioText: "かいます" },
-      { id: 8, jp: "とり ま す", romaji: "torimasu", vi: "Chụp (ảnh)", audioText: "とり ま す" },
+      { id: 8, jp: "とります", romaji: "torimasu", vi: "Chụp (ảnh)", audioText: "とります" },
       { id: 9, jp: "します", romaji: "shimasu", vi: "Làm / Chơi", audioText: "します" },
       { id: 10, jp: "あいます", romaji: "aimasu", vi: "Gặp (bạn)", audioText: "あいます" },
       { id: 11, jp: "ごはん", romaji: "gohan", vi: "Cơm / Bữa ăn", audioText: "ごはん" },
@@ -258,12 +258,12 @@ const minnaData = {
     fillBlanks: [
       { id: 1, question: "みず [blank] のみます。", answer: "を", options: ["を", "は", "で", "へ"] },
       { id: 2, question: "図書館 [blank] 本を 読みます。", answer: "で", options: ["で", "を", "に", "へ"] },
-      { id: 3, question: "いっしょに おちゃを [blank] か。", answer: "のみません", options: ["のみません", "のみます", "のぞみます", "の learned"] },
+      { id: 3, question: "いっしょに おちゃを [blank] か。", answer: "のみません", options: ["のみません", "のみます", "のぞみます", "のびます"] },
       { id: 4, question: "えきで ともだち [blank] あいます。", answer: "に", options: ["に", "を", "で", "へ"] }
     ],
     quiz: [
       { q: "Động từ 'Đọc' là gì?", options: ["みます", "ききます", "よみます", "かきます"], a: 2 },
-      { q: "Mẫu câu dùng để rủ rê người khác làm gì?", options: ["~ましょうか", "~ませんか", "~ meてください", "~ています"], a: 1 },
+      { q: "Mẫu câu dùng để rủ rê người khác làm gì?", options: ["~ましょうか", "~ませんか", "~てください", "~ています"], a: 1 },
       { q: "Trợ từ đứng trước động từ tác động trực tiếp (tân ngữ)?", options: ["は", "が", "を", "に"], a: 2 },
       { q: "'Chụp ảnh' dùng động từ nào?", options: ["とります", "かきます", "かいます", "みます"], a: 0 }
     ]
@@ -277,7 +277,7 @@ const minnaData = {
       { id: 3, jp: "あげます", romaji: "agemasu", vi: "Cho / Tặng", audioText: "あげます" },
       { id: 4, jp: "もらいます", romaji: "moraimasu", vi: "Nhận", audioText: "もらいます" },
       { id: 5, jp: "かします", romaji: "kashimasu", vi: "Cho mượn", audioText: "かします" },
-      { id: 6, jp: "かり ま す", romaji: "karimasu", vi: "Mượn", audioText: "かり ま す" },
+      { id: 6, jp: "かります", romaji: "karimasu", vi: "Mượn", audioText: "かります" },
       { id: 7, jp: "おしえます", romaji: "oshiemasu", vi: "Dạy học", audioText: "おしえます" },
       { id: 8, jp: "ならいます", romaji: "naraimasu", vi: "Học từ ai", audioText: "ならいます" },
       { id: 9, jp: "はし", romaji: "hashi", vi: "Đũa", audioText: "はし" },
@@ -298,7 +298,7 @@ const minnaData = {
       { id: 4, question: "「Thank you」は 日本語[blank] 何ですか。", answer: "で", options: ["で", "に", "を", "は"] }
     ],
     quiz: [
-      { q: "Từ nào có nghĩa là 'Cho mượn'?", options: ["みます", "かします", "かり ま す", "あげます"], a: 1 },
+      { q: "Từ nào có nghĩa là 'Cho mượn'?", options: ["みます", "かします", "かります", "あげます"], a: 1 },
       { q: "Trả lời câu hỏi 'もう べんきょうしましたか' nếu chưa làm?", options: ["はい、まだです。", "いいえ、もうしました。", "いいえ、まだです。", "はい、しました。"], a: 2 },
       { q: "'Nhận' trong tiếng Nhật là gì?", options: ["あげます", "もらいます", "かします", "おくります"], a: 1 },
       { q: "'Đũa' đọc là gì?", options: ["ナイフ", "フォーク", "はし", "はさみ"], a: 2 }
@@ -308,12 +308,12 @@ const minnaData = {
   lesson8: {
     title: "Bài 8: Tính từ & Trạng thái",
     vocab: [
-      { id: 1, jp: "ハンサム[な]", romaji: "hansamu[na]", vi: "Đẹp trai", audioText: "ハンサム" },
-      { id: 2, jp: "きれい[な]", romaji: "kirei[na]", vi: "Đẹp / Sạch sẻ", audioText: "きれい" },
-      { id: 3, jp: "しずか[な]", romaji: "shizuka[na]", vi: "Yên tĩnh", audioText: "しずか" },
-      { id: 4, jp: "にぎやか[な]", romaji: "nigiyaka[na]", vi: "Nhộn nhịp", audioText: "にぎやか" },
-      { id: 5, jp: "ゆうめい[な]", romaji: "yuumei[na]", vi: "Nổi tiếng", audioText: "ゆうめい" },
-      { id: 6, jp: "しんせつ[な]", romaji: "shinsetsu[na]", vi: "Tốt bụng", audioText: "しんせつ" },
+      { id: 1, jp: "ハンサム[な]", romaji: "hansamu[na]", vi: "Đẹp trai", audioText: "ハンサムな" },
+      { id: 2, jp: "きれい[な]", romaji: "kirei[na]", vi: "Đẹp / Sạch sẻ", audioText: "きれいな" },
+      { id: 3, jp: "しずか[な]", romaji: "shizuka[na]", vi: "Yên tĩnh", audioText: "しずかな" },
+      { id: 4, jp: "にぎやか[な]", romaji: "nigiyaka[na]", vi: "Nhộn nhịp", audioText: "にぎやかな" },
+      { id: 5, jp: "ゆうめい[な]", romaji: "yuumei[na]", vi: "Nổi tiếng", audioText: "ゆうめいな" },
+      { id: 6, jp: "しんせつ[な]", romaji: "shinsetsu[na]", vi: "Tốt bụng", audioText: "しんせつな" },
       { id: 7, jp: "おおきい", romaji: "ookii", vi: "To / Lớn", audioText: "おおきい" },
       { id: 8, jp: "ちいさい", romaji: "chiisai", vi: "Nhỏ / Bé", audioText: "ちいさい" },
       { id: 9, jp: "あたらしい", romaji: "atarashii", vi: "Mới", audioText: "あたらしい" },
@@ -329,7 +329,7 @@ const minnaData = {
       { pattern: "Phủ định Tính từ -na: + じゃ ありません", meaning: "Không...", example: "しずかじゃ ありません。", exampleVi: "Không yên tĩnh." }
     ],
     fillBlanks: [
-      { id: 1, question: "この ほんは あまり [blank] です。", answer: "おもしろくない", options: ["お面白くない", "おもしろい", "おもしろくありません", "おもしろいじゃありません"] },
+      { id: 1, question: "この ほんは あまり [blank] です。", answer: "おもしろくない", options: ["おもしろくない", "おもしろい", "おもしろくありません", "おもしろいじゃありません"] },
       { id: 2, question: "マイクさんは [blank] ひとです。", answer: "しんせつな", options: ["しんせつな", "しんせつ", "しんせつの", "しんせつい"] },
       { id: 3, question: "にほんの たべものは おいしいですが、[blank] です。", answer: "たかい", options: ["たかい", "やすい", "おもしろい", "つめたい"] }
     ],
@@ -337,7 +337,7 @@ const minnaData = {
       { q: "Dạng phủ định của tính từ 'たかい' là gì?", options: ["たかいくないです", "たかくないです", "たかいじゃありません", "たかくありませんでした"], a: 1 },
       { q: "Tính từ đuôi -na có nghĩa là 'Yên tĩnh'?", options: ["にぎやか", "しずか", "きれい", "ゆうめい"], a: 1 },
       { q: "Từ nào nghĩa là 'Nổi tiếng'?", options: ["ゆうめい", "しんせつ", "すてき", "ハンサム"], a: 0 },
-      { q: "Phủ định của 'きれい[な]' là gì?", options: ["きれいくないです", "きれいじゃ ありません", "きれいではない", "きれい small"], a: 1 }
+      { q: "Phủ định của 'きれい[な]' là gì?", options: ["きれいくないです", "きれいじゃ ありません", "きれいではない", "きれいではありません"], a: 1 }
     ]
   },
 
@@ -349,7 +349,7 @@ const minnaData = {
       { id: 3, jp: "すき[な]", romaji: "suki[na]", vi: "Thích", audioText: "すき" },
       { id: 4, jp: "きらい[な]", romaji: "kirai[na]", vi: "Ghét", audioText: "きらい" },
       { id: 5, jp: "じょうず[な]", romaji: "jouzu[na]", vi: "Giỏi", audioText: "じょうず" },
-      { id: 6, jp: "へた[na]", romaji: "heta[na]", vi: "Kém / Dở", audioText: "へた" },
+      { id: 6, jp: "へた[な]", romaji: "heta[na]", vi: "Kém / Dở", audioText: "へた" },
       { id: 7, jp: "りょうり", romaji: "ryouri", vi: "Món ăn", audioText: "りょうり" },
       { id: 8, jp: "スポーツ", romaji: "supootsu", vi: "Thể thao", audioText: "スポーツ" },
       { id: 9, jp: "おんがく", romaji: "ongaku", vi: "Âm nhạc", audioText: "おんがく" },
@@ -401,7 +401,7 @@ const minnaData = {
     fillBlanks: [
       { id: 1, question: "へやに テレビ [blank] あります。", answer: "が", options: ["が", "を", "に", "は"] },
       { id: 2, question: "いぬは つくえの [blank] に います。", answer: "した", options: ["した", "どこ", "なに", "だれ"] },
-      { id: 3, question: "はこの なかに てがみ [blank] しゃしんが あります。", answer: "や", options: ["や", "と", "も", "で"] },
+      { id: 3, question: "はおの なかに てがみ [blank] しゃしんが あります。", answer: "や", options: ["や", "と", "も", "で"] },
       { id: 4, question: "あそこに おんなのひとが [blank]。", answer: "います", options: ["います", "あります", "します", "いきます"] }
     ],
     quiz: [

@@ -108,15 +108,8 @@
   <!-- KHU VỰC ỨNG DỤNG HỌC TẬP (Sau khi Đăng Nhập) -->
   <main id="appSection" class="app-container" style="display: none;">
     
-    <!-- Thanh Chọn Bài Học -->
-    <div class="lesson-selector">
-      <button id="btn-lesson1" class="lesson-btn active" onclick="selectLesson('lesson1')">Bài 1</button>
-      <button id="btn-lesson2" class="lesson-btn" onclick="selectLesson('lesson2')">Bài 2</button>
-      <button id="btn-lesson3" class="lesson-btn" onclick="selectLesson('lesson3')">Bài 3</button>
-      <button id="btn-lesson4" class="lesson-btn" onclick="selectLesson('lesson4')">Bài 4</button>
-      <button id="btn-lesson5" class="lesson-btn" onclick="selectLesson('lesson5')">Bài 5</button>
-      <button id="btn-lesson6" class="lesson-btn" onclick="selectLesson('lesson6')">Bài 6</button>
-    </div>
+    <!-- Thanh Chọn Bài Học (dựng động từ minnaData) -->
+    <div class="lesson-selector" id="lessonSelector"></div>
 
     <!-- Thanh Chuyển Tính Năng (Tabs) -->
     <div class="tabs">
@@ -146,6 +139,7 @@
     // Khởi tạo trạng thái ban đầu
     window.onload = () => {
       checkAuth();
+      renderLessonSelector();
       renderCurrentTab();
     };
   </script>

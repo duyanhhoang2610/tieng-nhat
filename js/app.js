@@ -14,6 +14,21 @@ function speakJapanese(text) {
   }
 }
 
+// Dựng danh sách bài học từ minnaData
+function renderLessonSelector() {
+  const selector = document.getElementById('lessonSelector');
+  if (!selector) return;
+
+  const keys = Object.keys(minnaData);
+  if (!keys.includes(currentLesson)) currentLesson = keys[0];
+
+  selector.innerHTML = keys.map((key, i) => {
+    const num = key.replace(/^lesson/, '');
+    const active = key === currentLesson ? ' active' : '';
+    return `<button id="btn-${key}" class="lesson-btn${active}" onclick="selectLesson('${key}')">Bài ${num}</button>`;
+  }).join('');
+}
+
 // Chuyển bài học
 function selectLesson(lessonKey) {
   currentLesson = lessonKey;

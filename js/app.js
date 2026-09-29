@@ -18,7 +18,8 @@ function speakJapanese(text) {
 function selectLesson(lessonKey) {
   currentLesson = lessonKey;
   document.querySelectorAll('.lesson-btn').forEach(b => b.classList.remove('active'));
-  document.getElementById(`btn-${lessonKey}`).classList.add('active');
+  const btn = document.getElementById(`btn-${lessonKey}`);
+  if (btn) btn.classList.add('active');
   
   currentFlashcardIdx = 0;
   currentQuizIdx = 0;
@@ -32,13 +33,20 @@ let activeTab = 'flashcard';
 function switchTab(tabName) {
   activeTab = tabName;
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  document.getElementById(`tab-${tabName}`).classList.add('active');
+  const tabBtn = document.getElementById(`tab-${tabName}`);
+  if (tabBtn) tabBtn.classList.add('active');
   renderCurrentTab();
 }
 
 function renderCurrentTab() {
   const container = document.getElementById('tabContent');
+  if (!container) return;
   const lesson = minnaData[currentLesson];
+
+  if (!lesson) {
+    container.innerHTML = `<div style="text-align:center; padding:2rem;">Dữ liệu bài học đang được cập nhật!</div>`;
+    return;
+  }
 
   if (activeTab === 'flashcard') {
     renderFlashcard(container, lesson);
@@ -55,6 +63,11 @@ function renderCurrentTab() {
 
 // 1. Render Flashcard
 function renderFlashcard(container, lesson) {
+  if (!lesson.vocab || lesson.vocab.length === 0) {
+    container.innerHTML = `<div style="text-align:center;">Chưa có từ vựng cho bài học này.</div>`;
+    return;
+  }
+
   const item = lesson.vocab[currentFlashcardIdx];
   container.innerHTML = `
     <div class="flashcard-wrapper" onclick="this.querySelector('.flashcard').classList.toggle('flipped')">
@@ -79,18 +92,25 @@ function renderFlashcard(container, lesson) {
 
 function nextCard() {
   const vocab = minnaData[currentLesson].vocab;
+  if (!vocab || vocab.length === 0) return;
   currentFlashcardIdx = (currentFlashcardIdx + 1) % vocab.length;
   renderCurrentTab();
 }
 
 function prevCard() {
   const vocab = minnaData[currentLesson].vocab;
+  if (!vocab || vocab.length === 0) return;
   currentFlashcardIdx = (currentFlashcardIdx - 1 + vocab.length) % vocab.length;
   renderCurrentTab();
 }
 
 // 2. Render Ngữ pháp
 function renderGrammar(container, lesson) {
+  if (!lesson.grammar || lesson.grammar.length === 0) {
+    container.innerHTML = `<div class="quiz-card"><h3>📚 Cấu trúc ngữ pháp</h3><p style="margin-top:1rem;">Nội dung đang cập nhật...</p></div>`;
+    return;
+  }
+
   let html = `<div class="quiz-card"><h3>📚 Cấu trúc ngữ pháp</h3><br>`;
   lesson.grammar.forEach(g => {
     html += `
@@ -108,6 +128,11 @@ function renderGrammar(container, lesson) {
 
 // 3. Render Hội thoại
 function renderDialogue(container, lesson) {
+  if (!lesson.dialogue || lesson.dialogue.length === 0) {
+    container.innerHTML = `<div class="quiz-card" style="text-align:center;"><h3>💬 Bài hội thoại</h3><p style="margin-top:1rem;">Bài học này chưa có dữ liệu hội thoại.</p></div>`;
+    return;
+  }
+
   let html = `<div style="max-width: 600px; margin: 0 auto;">`;
   lesson.dialogue.forEach(d => {
     html += `
@@ -127,6 +152,11 @@ function renderDialogue(container, lesson) {
 
 // 4. Render Đục lỗ
 function renderFillBlanks(container, lesson) {
+  if (!lesson.fillBlanks || lesson.fillBlanks.length === 0) {
+    container.innerHTML = `<div class="quiz-card"><h3>✏️ Bài tập điền từ vào chỗ trống</h3><p style="margin-top:1rem;">Nội dung đang cập nhật...</p></div>`;
+    return;
+  }
+
   let html = `<div class="quiz-card"><h3>✏️ Bài tập điền từ vào chỗ trống</h3><br>`;
   lesson.fillBlanks.forEach((item, idx) => {
     html += `
@@ -157,6 +187,11 @@ function checkFill(btn, selected, correct) {
 // 5. Render Quiz
 function renderQuiz(container, lesson) {
   const quizList = lesson.quiz;
+  if (!quizList || quizList.length === 0) {
+    container.innerHTML = `<div class="quiz-card"><h3>❓ Bài tập Quiz</h3><p style="margin-top:1rem;">Nội dung đang cập nhật...</p></div>`;
+    return;
+  }
+
   if (currentQuizIdx >= quizList.length) {
     container.innerHTML = `
       <div class="quiz-card" style="text-align: center;">
@@ -188,3 +223,8 @@ function answerQuiz(selected, correct) {
   currentQuizIdx++;
   renderCurrentTab();
 }
+
+// Khởi chạy mặc định khi trang tải xong
+document.addEventListener('DOMContentLoaded', () => {
+  renderCurrentTab();
+});

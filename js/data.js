@@ -554,4 +554,249 @@ const minnaData = {
     ],
     quiz: [
       { q: "Phương tiện 'Tàu điện' là gì?", options: ["ひこうき", "でんしゃ", "バス", "タクシー"], a: 1 },
-      { q: "Ngày mùng
+      { q: "Ngày mùng 1 hàng tháng đọc là gì?", options: ["ついたち", "ふつか", "みっか", "はつか"], a: 0 },
+      { q: "Từ nào nghĩa là 'Đi bộ'?", options: ["あるいて", "じてんしゃ", "ひとり で", "タクシー"], a: 0 },
+      { q: "Hỏi 'Khi nào/Bao giờ' dùng từ gì?", options: ["いつ", "どこ", "だれ", "なん"], a: 0 }
+    ]
+  },
+
+  lesson6: {
+    title: "Bài 6: Tân ngữ & Mời mọc",
+    vocab: [
+      { id: 1, jp: "たべます", romaji: "tabemasu", vi: "Ăn", audioText: "たべます" },
+      { id: 2, jp: "のみます", romaji: "nomimasu", vi: "Uống", audioText: "のみます" },
+      { id: 3, jp: "みます", romaji: "mimasu", vi: "Xem / Nhìn", audioText: "みます" },
+      { id: 4, jp: "ききます", romaji: "kikimasu", vi: "Nghe", audioText: "ききます" },
+      { id: 5, jp: "よみます", romaji: "yomimasu", vi: "Đọc", audioText: "よみます" },
+      { id: 6, jp: "かきます", romaji: "kakimasu", vi: "Viết / Vẽ", audioText: "かきます" },
+      { id: 7, jp: "かいます", romaji: "kaimasu", vi: "Mua", audioText: "かいます" },
+      { id: 8, jp: "とります", romaji: "torimasu", vi: "Chụp (ảnh)", audioText: "とります" },
+      { id: 9, jp: "します", romaji: "shimasu", vi: "Làm / Chơi", audioText: "します" },
+      { id: 10, jp: "あいます", romaji: "aimasu", vi: "Gặp (bạn)", audioText: "あいます" },
+      { id: 11, jp: "ごはん", romaji: "gohan", vi: "Cơm / Bữa ăn", audioText: "ごはん" },
+      { id: 12, jp: "みず", romaji: "mizu", vi: "Nước", audioText: "みず" },
+      { id: 13, jp: "おちゃ", romaji: "ocha", vi: "Trà", audioText: "おちゃ" },
+      { id: 14, jp: "いっしょに", romaji: "isshoni", vi: "Cùng nhau", audioText: "いっしょに" }
+    ],
+    grammar: [
+      { pattern: "N を V", meaning: "Thực hiện hành động V lên N", example: "ごはんを たべます。", exampleVi: "Tôi ăn cơm." },
+      { pattern: "N (Địa điểm) で V", meaning: "Làm gì tại địa điểm N", example: "レストランで たべます。", exampleVi: "Tôi ăn ở nhà hàng." },
+      { pattern: "V ませ ん か", meaning: "Cùng làm... không? (Rủ rê)", example: "おちゃを のみませんか。", exampleVi: "Uống trà cùng tôi không?" }
+    ],
+    fillBlanks: [
+      { id: 1, question: "みず [blank] のみます。", answer: "を", options: ["を", "は", "で", "へ"] },
+      { id: 2, question: "図書館 [blank] 本を 読みます。", answer: "で", options: ["で", "を", "に", "へ"] },
+      { id: 3, question: "いっしょに おちゃを [blank] か。", answer: "のみません", options: ["のみません", "のみます", "のぞみます", "のびます"] },
+      { id: 4, question: "えきで ともだち [blank] あいます。", answer: "に", options: ["に", "を", "で", "へ"] }
+    ],
+    quiz: [
+      { q: "Động từ 'Đọc' là gì?", options: ["みます", "ききます", "よみます", "かきます"], a: 2 },
+      { q: "Mẫu câu dùng để rủ rê người khác làm gì?", options: ["~ましょうか", "~ませんか", "~てください", "~ています"], a: 1 },
+      { q: "Trợ từ đứng trước động từ tác động trực tiếp (tân ngữ)?", options: ["は", "が", "を", "に"], a: 2 },
+      { q: "'Chụp ảnh' dùng động từ nào?", options: ["とります", "かきます", "かいます", "みます"], a: 0 }
+    ]
+  },
+
+  lesson7: {
+    title: "Bài 7: Công cụ & Cho nhận",
+    vocab: [
+      { id: 1, jp: "きります", romaji: "kirimasu", vi: "Cắt", audioText: "きります" },
+      { id: 2, jp: "おくります", romaji: "okurimasu", vi: "Gửi", audioText: "おくります" },
+      { id: 3, jp: "あげます", romaji: "agemasu", vi: "Cho / Tặng", audioText: "あげます" },
+      { id: 4, jp: "もらいます", romaji: "moraimasu", vi: "Nhận", audioText: "もらいます" },
+      { id: 5, jp: "かします", romaji: "kashimasu", vi: "Cho mượn", audioText: "かします" },
+      { id: 6, jp: "かります", romaji: "karimasu", vi: "Mượn", audioText: "かります" },
+      { id: 7, jp: "おしえます", romaji: "oshiemasu", vi: "Dạy học", audioText: "おしえます" },
+      { id: 8, jp: "ならいます", romaji: "naraimasu", vi: "Học từ ai", audioText: "ならいます" },
+      { id: 9, jp: "はし", romaji: "hashi", vi: "Đũa", audioText: "はし" },
+      { id: 10, jp: "はさみ", romaji: "hasami", vi: "Cái kéo", audioText: "はさみ" },
+      { id: 11, jp: "プレゼント", romaji: "purezento", vi: "Quà tặng", audioText: "プレゼント" },
+      { id: 12, jp: "もう", romaji: "mou", vi: "Đã / Rồi", audioText: "もう" },
+      { id: 13, jp: "まだ", romaji: "mada", vi: "Chưa", audioText: "まだ" }
+    ],
+    grammar: [
+      { pattern: "N (Công cụ) で V", meaning: "Làm gì bằng công cụ N", example: "はしで たべます。", exampleVi: "Ăn bằng đũa." },
+      { pattern: "N1 に N2 を あげます", meaning: "Tặng N2 cho N1", example: "ヤマダさんに はなを あげました。", exampleVi: "Tặng hoa cho cô Yamada." },
+      { pattern: "N1 に N2 を もらいます", meaning: "Nhận N2 từ N1", example: "ミラーさんに ほんを もらいました。", exampleVi: "Nhận sách từ anh Miller." }
+    ],
+    fillBlanks: [
+      { id: 1, question: "スプーン [blank] たべます。", answer: "で", options: ["で", "に", "を", "へ"] },
+      { id: 2, question: "マリアさん [blank] プレゼントを あげます。", answer: "に", options: ["に", "で", "を", "から"] },
+      { id: 3, question: "もう しゅくだいを しましたか。 - いいえ、[blank] です。", answer: "まだ", options: ["まだ", "もう", "ぜんぜん", "よく"] },
+      { id: 4, question: "「Thank you」は 日本語[blank] 何ですか。", answer: "で", options: ["で", "に", "を", "は"] }
+    ],
+    quiz: [
+      { q: "Từ nào có nghĩa là 'Cho mượn'?", options: ["みます", "かします", ""かりま", "おしえます"], a: 1 },
+      { q: "Trả lời sao khi được hỏi 'Đã học chưa?' nhưng chưa học?", options: ["はい、もうです", "いいえ、まだです", "はい、まだです", "いいえ、もうです"], a: 1 },
+      { q: "Từ nào dịch là 'Nhận'?", options: ["あげます", "もらいます", "かします", "おくります"], a: 1 },
+      { q: "'Đũa' trong tiếng Nhật là gì?", options: ["ナイフ", "フォーク", "スプーン", "はし"], a: 3 }
+    ]
+  },
+
+  lesson8: {
+    title: "Bài 8: Tính từ (i & na)",
+    vocab: [
+      { id: 1, jp: "ハンサム[な]", romaji: "hansamu[na]", vi: "Đẹp trai", audioText: "ハンサム" },
+      { id: 2, jp: "きれい[な]", romaji: "kirei[na]", vi: "Đẹp / Sạch sẻ", audioText: "きれい" },
+      { id: 3, jp: "しずか[な]", romaji: "shizuka[na]", vi: "Yên tĩnh", audioText: "しずか" },
+      { id: 4, jp: "にぎやか[な]", romaji: "nigiyaka[na]", vi: "Náo nhiệt / Sầm uất", audioText: "にぎやか" },
+      { id: 5, jp: "ゆうめい[な]", romaji: "yuumei[na]", vi: "Nổi tiếng", audioText: "ゆうめい" },
+      { id: 6, jp: "しんせつ[な]", romaji: "shinsetsu[na]", vi: "Tốt bụng / Thân thiện", audioText: "しんせつ" },
+      { id: 7, jp: "げんき[な]", romaji: "genki[na]", vi: "Khỏe mạnh", audioText: "げんき" },
+      { id: 8, jp: "ひま[な]", romaji: "hima[na]", vi: "Rảnh rỗi", audioText: "ひま" },
+      { id: 9, jp: "べんり[な]", romaji: "benri[na]", vi: "Tiện lợi", audioText: "べんり" },
+      { id: 10, jp: "おおきい", romaji: "ookii", vi: "To / Lớn", audioText: "おおきい" },
+      { id: 11, jp: "ちいさい", romaji: "chiisai", vi: "Nhỏ / Bé", audioText: "ちいさい" },
+      { id: 12, jp: "あたらしい", romaji: "atarashii", vi: "Mới", audioText: "あたらしい" },
+      { id: 13, jp: "ふるい", romaji: "furui", vi: "Cũ", audioText: "ふるい" },
+      { id: 14, jp: "いい（よい）", romaji: "ii (yoi)", vi: "Tốt / Hay", audioText: "いい" },
+      { id: 15, jp: "わるい", romaji: "warui", vi: "Xấu / Dở", audioText: "わるい" },
+      { id: 16, jp: "あつい", romaji: "atsui", vi: "Nóng", audioText: "あつい" },
+      { id: 17, jp: "さむい", romaji: "samui", vi: "Lạnh (thời tiết)", audioText: "さむい" },
+      { id: 18, jp: "つめたい", romaji: "tsumetai", vi: "Lạnh (cảm giác)", audioText: "つめたい" },
+      { id: 19, jp: "むずかしい", romaji: "muzukashii", vi: "Khó", audioText: "むずかしい" },
+      { id: 20, jp: "やさしい", romaji: "yasashii", vi: "Dễ / Dịu dàng", audioText: "やさしい" },
+      { id: 21, jp: "たかい", romaji: "takai", vi: "Đắt / Cao", audioText: "たかい" },
+      { id: 22, jp: "やすい", romaji: "yasui", vi: "Rẻ", audioText: "やすい" },
+      { id: 23, jp: "ひくい", romaji: "hikui", vi: "Thấp", audioText: "ひくい" },
+      { id: 24, jp: "おもしろい", romaji: "omoshiroi", vi: "Thú vị / Hay", audioText: "おもしろい" },
+      { id: 25, jp: "おいしい", romaji: "oishii", vi: "Ngon", audioText: "おいしい" },
+      { id: 26, jp: "いそがしい", romaji: "isogashii", vi: "Bận rộn", audioText: "いそがしい" },
+      { id: 27, jp: "たのしい", romaji: "tanoshii", vi: "Vui vẻ", audioText: "たのしい" },
+      { id: 28, jp: "しろい", romaji: "shiroi", vi: "Màu trắng", audioText: "しろい" },
+      { id: 29, jp: "くろい", romaji: "kuroi", vi: "Màu đen", audioText: "くろい" },
+      { id: 30, jp: "あかい", romaji: "akai", vi: "Màu đỏ", audioText: "あかい" }
+    ],
+    grammar: [
+      { pattern: "N は Tính-từ-i / Tính-từ-na です", meaning: "N thì...", example: "サクラは きれいです。", exampleVi: "Hoa anh đào đẹp." },
+      { pattern: "Tính-từ-i (-i) + くないです", meaning: "Phủ định tính từ đuôi i", example: "このほんは おもしろくないです。", exampleVi: "Cuốn sách này không hay." },
+      { pattern: "Tính-từ-na + じゃ ありません", meaning: "Phủ định tính từ đuôi na", example: "ここは しずかじゃ ありません。", exampleVi: "Ở đây không yên tĩnh." }
+    ],
+    fillBlanks: [
+      { id: 1, question: "この 料理は あまり [blank] です。", answer: "おいしくない", options: ["おいしくない", "おいしい", "おいしいじゃ", "おいしいくない"] },
+      { id: 2, question: "ワット先生は とても [blank] 先生です。", answer: "親切な", options: ["親切な", "親切", "親切の", "親切に"] },
+      { id: 3, question: "日本の 食べ物は どうですか。 - [blank] が、高いです。", answer: "おいしいです", options: ["おいしいです", "おいしくないです", "おいしかったです", "おいしい"] }
+    ],
+    quiz: [
+      { q: "Tính từ đuôi i 'Chịu/Đắt' là gì?", options: ["やすい", "たかい", "ひくい", "おもしろい"], a: 1 },
+      { q: "Phủ định của tính từ đuôi i 'いい' là gì?", options: ["いいくないです", "よくないです", "いいじゃありません", "よくじゃありません"], a: 1 },
+      { q: "'きれい[な]' thuộc loại tính từ nào?", options: ["Tính từ đuôi i", "Tính từ đuôi na", "Động từ", "Danh từ"], a: 1 },
+      { q: "Từ nào có nghĩa là 'Yên tĩnh'?", options: ["にぎやか", "しずか", "ひま", "べんり"], a: 1 }
+    ]
+  },
+
+  lesson9: {
+    title: "Bài 9: Sơ thích & Thích / Ghét",
+    vocab: [
+      { id: 1, jp: "わかります", romaji: "wakarimasu", vi: "Hiểu / Biết", audioText: "わかります" },
+      { id: 2, jp: "あります", romaji: "arimasu", vi: "Có (đồ vật)", audioText: "あります" },
+      { id: 3, jp: "すき[な]", romaji: "suki[na]", vi: "Thích", audioText: "すき" },
+      { id: 4, jp: "きらい[な]", romaji: "kirai[na]", vi: "Ghét", audioText: "きらい" },
+      { id: 5, jp: "じょうず[な]", romaji: "jouzu[na]", vi: "Giỏi / Khéo", audioText: "じょうず" },
+      { id: 6, jp: "へた[な]", romaji: "heta[na]", vi: "Kém / Dở", audioText: "へた" },
+      { id: 7, jp: "りょうり", romaji: "ryouri", vi: "Món ăn / Nấu ăn", audioText: "りょうり" },
+      { id: 8, jp: "のみもの", romaji: "nomimono", vi: "Đồ uống", audioText: "のみもの" },
+      { id: 9, jp: "スポーツ", romaji: "supootsu", vi: "Thể thao", audioText: "スポーツ" },
+      { id: 10, jp: "야구 / やきゅう", romaji: "yakyuu", vi: "Bóng chày", audioText: "やきゅう" },
+      { id: 11, jp: "ダンス", romaji: "dansu", vi: "Nhảy / Khiêu vũ", audioText: "ダンス" },
+      { id: 12, jp: "りょこう", romaji: "ryokou", vi: "Du lịch", audioText: "りょこう" },
+      { id: 13, jp: "おんがく", romaji: "ongaku", vi: "Âm nhạc", audioText: "おんがく" },
+      { id: 14, jp: "うた", romaji: "uta", vi: "Bài hát", audioText: "うた" },
+      { id: 15, jp: "クラシック", romaji: "kurashikku", vi: "Nhạc cổ điển", audioText: "クラシック" },
+      { id: 16, jp: "ジャズ", romaji: "jazu", vi: "Nhạc Jaz", audioText: "ジャズ" },
+      { id: 17, jp: "コンサート", romaji: "konsaato", vi: "Buổi hòa nhạc", audioText: "コンサート" },
+      { id: 18, jp: "カラオケ", romaji: "karaoke", vi: "Karaoke", audioText: "カラオケ" },
+      { id: 19, jp: "歌舞伎 / かぶき", romaji: "kabuki", vi: "Kịch Kabuki", audioText: "かぶき" },
+      { id: 20, jp: "え", romaji: "e", vi: "Bức tranh", audioText: "え" },
+      { id: 21, jp: "じ", romaji: "ji", vi: "Chữ cái", audioText: "じ" },
+      { id: 22, jp: "かんじ", romaji: "kanji", vi: "Chữ Hán Kanji", audioText: "かんじ" },
+      { id: 23, jp: "ひらがな", romaji: "hiragana", vi: "Chữ Hiragana", audioText: "ひらがな" },
+      { id: 24, jp: "かたかな", romaji: "katakana", vi: "Chữ Katakana", audioText: "かたかな" },
+      { id: 25, jp: "ローマじ", romaji: "roomaji", vi: "Chữ La-măng (Romaji)", audioText: "ローマじ" },
+      { id: 26, jp: "こかい", romaji: "kokai", vi: "Tiền lẻ", audioText: "こかい" },
+      { id: 27, jp: "チケット", romaji: "chiketto", vi: "Tấm vé", audioText: "チケット" },
+      { id: 28, jp: "じかん", romaji: "jikan", vi: "Thời gian", audioText: "じかん" },
+      { id: 29, jp: "ようじ", romaji: "youji", vi: "Việc bận", audioText: "ようじ" },
+      { id: 30, jp: "やくそく", romaji: "yakusoku", vi: "Cuộc hẹn / Lời hứa", audioText: "やくそく" }
+    ],
+    grammar: [
+      { pattern: "N が すき / きらい / じょうず / へた です", meaning: "Thích / Ghét / Giỏi / Kém về N", example: "わたしは イタリアりょうりが すきです。", exampleVi: "Tôi thích món Ý." },
+      { pattern: "N が わかります / あります", meaning: "Hiểu / Có N", example: "にほんごが わかります。", exampleVi: "Tôi hiểu tiếng Nhật." },
+      { pattern: "から", meaning: "Vì... (Chỉ lý do)", example: "じかんが ありませんから、どこも いきません。", exampleVi: "Vì không có thời gian nên tôi không đi đâu cả." }
+    ],
+    fillBlanks: [
+      { id: 1, question: "わたしは 日本語[blank] すきます。", answer: "が", options: ["が", "を", "は", "に"] },
+      { id: 2, question: "約束が あります[blank]、早く 帰ります。", answer: "から", options: ["から", "まで", "ので", "と"] },
+      { id: 3, question: "ひらがなが [blank] わかります。", answer: "だいたい", options: ["だいたい", "たくさん", "とても", "ぜんぜん"] }
+    ],
+    quiz: [
+      { q: "Trợ từ đi cùng với 'すき/きらい/じょうず/へた' là gì?", options: ["を", "が", "に", "で"], a: 1 },
+      { q: "Từ nào nghĩa là 'Món ăn'?", options: ["の みもの", "りょうり", "スポーツ", "おんがく"], a: 1 },
+      { q: "'Có cuộc hẹn/lời hứa' dùng từ nào?", options: ["ようじ", "じかん", "やくそく", "チケット"], a: 2 },
+      { q: "'Không hiểu một chút nào' đi với phủ định dùng từ nào?", options: ["よく", "だいたい", "すこし", "ぜんぜん"], a: 3 }
+    ]
+  },
+
+  lesson10: {
+    title: "Bài 10: Tồn tại & Trợ từ います/あります",
+    vocab: [
+      { id: 1, jp: "あります", romaji: "arimasu", vi: "Có (đồ vật, cây cối...)", audioText: "あります" },
+      { id: 2, jp: "います", romaji: "imasu", vi: "Có / Tồn tại (người, động vật...)", audioText: "います" },
+      { id: 3, jp: "いろいろ[な]", romaji: "iroiro[na]", vi: "Nhiều / Phong phú", audioText: "いろいろ" },
+      { id: 4, jp: "おとこのひと", romaji: "otoko no hito", vi: "Người đàn ông", audioText: "おとこのひと" },
+      { id: 5, jp: "おんなのひと", romaji: "onna no hito", vi: "Người phụ nữ", audioText: "おんなのひと" },
+      { id: 6, jp: "おとこのこ", romaji: "otoko no ko", vi: "Bé trai", audioText: "おとこのこ" },
+      { id: 7, jp: "おんなのこ", romaji: "onna no ko", vi: "Bé gái", audioText: "おんなのこ" },
+      { id: 8, jp: "いぬ", romaji: "inu", vi: "Con chó", audioText: "いぬ" },
+      { id: 9, jp: "ねこ", romaji: "neko", vi: "Con mèo", audioText: "ねこ" },
+      { id: 10, jp: "き", romaji: "ki", vi: "Cây / Gỗ", audioText: "き" },
+      { id: 11, jp: "もの", romaji: "mono", vi: "Đồ vật", audioText: "もの" },
+      { id: 12, jp: "フィルム", romaji: "firumu", vi: "Cuộn phim", audioText: "フィルム" },
+      { id: 13, jp: "電池 / でんち", romaji: "denchi", vi: "Cục Pin", audioText: "でんち" },
+      { id: 14, jp: "箱 / はこ", romaji: "hako", vi: "Cái hộp", audioText: "はこ" },
+      { id: 15, jp: "スイッチ", romaji: "suicchi", vi: "Công tắc", audioText: "スイッチ" },
+      { id: 16, jp: "冷蔵庫 / れいぞうこ", romaji: "reizouko", vi: "Tủ lạnh", audioText: "れいぞうこ" },
+      { id: 17, jp: "テーブル", romaji: "teeburu", vi: "Bàn ăn", audioText: "テーブル" },
+      { id: 18, jp: "ベッド", romaji: "beddo", vi: "Cái giường", audioText: "ベッド" },
+      { id: 19, jp: "棚 / たな", romaji: "tana", vi: "Cái giá / Kệ", audioText: "たな" },
+      { id: 20, jp: "ドア", romaji: "doa", vi: "Cửa ra vào", audioText: "ドア" },
+      { id: 21, jp: "窓 / まど", romaji: "mado", vi: "Cửa sổ", audioText: "まど" },
+      { id: 22, jp: "ポスト", romaji: "posuto", vi: "Hòm thư", audioText: "ポスト" },
+      { id: 23, jp: "ビル", romaji: "biru", vi: "Tòa nhà", audioText: "ビル" },
+      { id: 24, jp: "公園 / こうえん", romaji: "kouen", vi: "Công viên", audioText: "こうえん" },
+      { id: 25, jp: "喫茶店 / きっさてん", romaji: "kissaten", vi: "Quán cà phê", audioText: "きっさてん" },
+      { id: 26, jp: "本屋 / ほんや", romaji: "hon'ya", vi: "Tiệm sách", audioText: "ほんや" },
+      { id: 27, jp: "～や", romaji: "~ya", vi: "Cửa hiệu ~", audioText: "や" },
+      { id: 28, jp: "乗り場 / のりば", romaji: "noriba", vi: "Bến xe / Điểm đón", audioText: "のりば" },
+      { id: 29, jp: "県 / けん", romaji: "ken", vi: "Tỉnh (đơn vị hành chính)", audioText: "けん" },
+      { id: 30, jp: "上 / うえ", romaji: "ue", vi: "Trên", audioText: "うえ" },
+      { id: 31, jp: "下 / した", romaji: "shita", vi: "Dưới", audioText: "した" },
+      { id: 32, jp: "前 / まえ", romaji: "mae", vi: "Trước", audioText: "まえ" },
+      { id: 33, jp: "うしろ", romaji: "ushiro", vi: "Sau", audioText: "うしろ" },
+      { id: 34, jp: "右 / みぎ", romaji: "migi", vi: "Bên phải", audioText: "みぎ" },
+      { id: 35, jp: "左 / ひだり", romaji: "hidari", vi: "Bên trái", audioText: "ひだり" },
+      { id: 36, jp: "中 / なか", romaji: "naka", vi: "Bên trong", audioText: "なか" },
+      { id: 37, jp: "外 / そと", romaji: "soto", vi: "Bên ngoài", audioText: "そっと" },
+      { id: 38, jp: "隣 / となり", romaji: "tonari", vi: "Bên cạnh", audioText: "となり" },
+      { id: 39, jp: "近く / ちかく", romaji: "chikaku", vi: "Gần", audioText: "ちかく" },
+      { id: 40, jp: "間 / あいだ", romaji: "aida", vi: "Ở giữa", audioText: "あいだ" }
+    ],
+    grammar: [
+      { pattern: "N (Địa điểm) に N2 が あります / います", meaning: "Ở địa điểm N có N2 (Vật / Người)", example: "へやに テレビが あります。", exampleVi: "Ở trong phòng có tivi." },
+      { pattern: "N1 は N2 (Địa điểm) に あります / います", meaning: "N1 ở địa điểm N2", example: "ミラーさんは じむしょに います。", exampleVi: "Anh Miller đang ở văn phòng." },
+      { pattern: "N1 (Vị trí) の N2 (Phương hướng)", meaning: "Vị trí tương quan (trên/dưới/trong/ngoài...)", example: "つくえの うえに ほんが あります。", exampleVi: "Trên bàn có quyển sách." }
+    ],
+    fillBlanks: [
+      { id: 1, question: "へやに テレビ [blank] あります。", answer: "が", options: ["が", "は", "に", "で"] },
+      { id: 2, question: "いぬは つくえの [blank] に います。", answer: "した", options: ["した", "うえ", "なか", "まえ"] },
+      { id: 3, question: "はこの なかに てがみ [blank] しゃしんが あります。", answer: "や", options: ["や", "と", "も", "は"] },
+      { id: 4, question: "あそこに おんなのひとが [blank]。", answer: "います", options: ["います", "あります", "です", "します"] }
+    ],
+    quiz: [
+      { q: "Động từ chỉ sự tồn tại của người/động vật là gì?", options: ["あります", "います", "します", "いきます"], a: 1 },
+      { q: "Từ chỉ vị trí 'Bên cạnh' là gì?", options: ["うえ", "した", "となり", "あいだ"], a: 2 },
+      { q: "Động từ chỉ sự tồn tại của đồ vật/cây cối là gì?", options: ["います", "あります", "きます", "かえります"], a: 1 },
+      { q: "Từ chỉ 'Tủ lạnh' là gì?", options: ["れいぞうこ", "ベッド", "テーブル", "スイッチ"], a: 0 }
+    ]
+  }
+};
